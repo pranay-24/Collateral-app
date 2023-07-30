@@ -1,0 +1,19 @@
+extends layout 
+
+
+block main-content 
+    p Please refer to the list to know which stocks are eligible for collateral
+
+    form(method="post", action="/addstock/addStockItem/submit")
+        div
+            label(for="stockName") Stock Name:
+            input(type="text", name="stockName", id="stockName")
+        div
+            label(for="stockQty") Quantity:
+            input(type="text", name="stockQty", id="stockQty")
+     
+        div
+            button(type="submit") Pledge Stock
+    
+    p List of Stocks in Toronto Stock Exchange against which collateral is given.
+    a.button(href="/top50list") See List

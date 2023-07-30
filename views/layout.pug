@@ -8,9 +8,20 @@ html
       link(rel="stylesheet", type="text/css", href="/styles.css")
   body
     header#header 
-      .header-content   
-        h2#site-name 
-          a(href="/") Test site 
+          
+      
+      // Add navigation links
+      nav
+        h2.sitename 
+           a(href="/") Collateral App 
+        ul
+          li
+            a(href="/") Home
+          li
+            a(href="/addstock") Add Stock
+          li
+            a(href="/addcrypto") Add Crypto
+
     main#main 
       block main-content 
     footer#footer 

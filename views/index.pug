@@ -2,15 +2,55 @@ extends layout
 
 
 block main-content 
-  -
-    //You can overwrite the main-content block by writing block content
-    //in the template file which is extending.
-  h1.page-title Hello! Here's a list of stocks and cryptos
+
   
-  p Pervious value of the searched stock#{pv}
-  p Total value of portfolio#{total}
-  p Maximum margina allowed for stock 0.8 percent#{maxMar}
-  p #{availableCryptos}
-  p crypto total #{cryptoTotal}
-  p etherium #{etherium }
+
+
+  h1.page-title Hello! Here's a list of your pledged stocks and cryptocurrency
+  h1.page-title Loan Value is 10000 USD
+  .stock 
+  h2 Pledged Stocks List
+
+  
+  table
+      thead
+        tr
+          th Stock Name
+          th Quantity
+      tbody
+        each stock in stockList
+          tr
+            td= stock.name
+            td= stock.qty
+  .crypto 
+  h3 Daily Total value of Pledged Stocks :  #{total}
+
+  h2 Pledged Crypto-currency List
+
+  
+  table
+      thead
+        tr
+          th Crypto Name
+          th Quantity
+      tbody
+        each crypto in cryptoList
+          tr
+            td=crypto.name
+            td= crypto.qty
+  h3 Daily Total value of Pledged CryptoCurrency : #{cryptoTotal}
+  
+  h3 Total Value of Pledged Assets : #{totalPledge}
+ 
+  if (totalPledge)< 10000
+     p Current pledge value is less than total value. Margin Shortfall is #{marginShortfall}
+  
+  else
+     p Current pledge value is more than total value. No action required.
+  
+  p Try refreshing again to get the right prices. Sometimes there are bad API calls.
+
+  //- p #{availableCryptos}
+  //- p crypto total #{cryptoTotal}
+ 
   

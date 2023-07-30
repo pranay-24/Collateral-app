@@ -1,0 +1,10 @@
+extends layout 
+
+
+block main-content 
+    h1 Stock Autocomplete
+    input(type='text', id='stockInput', placeholder='Enter a stock name')
+    ul#autocompleteList
+    script(src='script.js')
+    p Stock Selected: #{selectedStock}
+    

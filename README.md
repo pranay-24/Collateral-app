@@ -1,13 +1,11 @@
-# Some changes from last time
+# Collateral Tool - A Tool to know the daily value of the collateral (pledged asset). This helps in comparing with the loan value to know how much is the differnce between them. 
 
-## Local modules
-The Trakt API stuff is in the /modules/trakt folder.
+### I have used Coin API to fetch crypto price and MarketStack API to fetch the stocks price. 
 
+### Sometimes if the price is not updated , try refreshing. Its because of the ney=twork issue. 
 
-## Secured API settings using .env
-1. Use the dotenv module (npm i dotenv) to save values in environment variables.
-2. Place your values in the .env file with the custom environment variables written in all caps equals the value (one per line).
+### You can pledge more stock and that will be added to the existing pledged stocks list. 
+### You can pledge more crypto and that will be added to the existing pledged crypto list. 
 
-## To run
-1. Modify the .env file values to ones which reflect your app settings.
-
+### CoinAPI.io documentation  link https://docs.coinapi.io/
+### Marketstack API documentation link https://marketstack.com/documentation

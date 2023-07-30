@@ -1,0 +1,16 @@
+extends layout 
+
+
+block main-content 
+ p Please add Crypto symbols only like BTC, BCH, ETH, etc.
+
+ form(method="post", action="/addcrypto/addCryptoItem/submit")
+    div
+        label(for="cryptoName") Crypto Name:
+        input(type="text", name="cryptoName", id="cryptoName")
+    div
+        label(for="cryptoQty") Quantity:
+        input(type="text", name="cryptoQty", id="cryptoQty")
+    div
+        button(type="submit") Pledge Crypto
+    
