@@ -1,0 +1,16 @@
+extends layout 
+
+
+block main-content 
+  -
+    //You can overwrite the main-content block by writing block content
+    //in the template file which is extending.
+  h1.page-title Hello! Here's a list of stocks and cryptos
+  
+  p Pervious value of the searched stock#{pv}
+  p Total value of portfolio#{total}
+  p Maximum margina allowed for stock 0.8 percent#{maxMar}
+  p #{availableCryptos}
+  p crypto total #{cryptoTotal}
+  p etherium #{etherium }
+  
