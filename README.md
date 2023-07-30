@@ -2,7 +2,7 @@
 
 ### I have used Coin API to fetch crypto price and MarketStack API to fetch the stocks price. 
 
-### Sometimes if the price is not updated , try refreshing. Its because of the ney=twork issue. 
+### Sometimes if the price is not updated , try refreshing. Its because of the network issue. 
 
 ### You can pledge more stock and that will be added to the existing pledged stocks list. 
 ### You can pledge more crypto and that will be added to the existing pledged crypto list. 
