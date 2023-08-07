@@ -1,19 +1,22 @@
-extends layout 
+extends layout
 
+block main-content
+  .page-title-container
+    h1.page-title Pledge More Stocks
+    h1.page-subtitle Expand your collateral with additional stocks
 
-block main-content 
+  .stock-form
     p Please refer to the list to know which stocks are eligible for collateral
+    form.form-container(method="post", action="/addstock/addStockItem/submit")
+      .form-group
+        label(for="stockName") Stock Name:
+        input.form-control(type="text", name="stockName", id="stockName", required)
+      .form-group
+        label(for="stockQty") Quantity:
+        input.form-control(type="number", name="stockQty", id="stockQty", required)
+      .form-group
+        button.btn.btn-primary(type="submit") Pledge Stock
 
-    form(method="post", action="/addstock/addStockItem/submit")
-        div
-            label(for="stockName") Stock Name:
-            input(type="text", name="stockName", id="stockName")
-        div
-            label(for="stockQty") Quantity:
-            input(type="text", name="stockQty", id="stockQty")
-     
-        div
-            button(type="submit") Pledge Stock
-    
+  .stock-list
     p List of Stocks in Toronto Stock Exchange against which collateral is given.
-    a.button(href="/top50list") See List
+    a.btn.btn-link(href="/top50list") See List

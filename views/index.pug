@@ -1,18 +1,13 @@
-extends layout 
+extends layout
 
+block main-content
+  .page-title-container
+    h1.page-title Hello! Here's a list of your pledged stocks and cryptocurrency
+    h1.page-subtitle Loan Value: $10,000 USD
 
-block main-content 
-
-  
-
-
-  h1.page-title Hello! Here's a list of your pledged stocks and cryptocurrency
-  h1.page-title Loan Value is 10000 USD
-  .stock 
-  h2 Pledged Stocks List
-
-  
-  table
+  .stock
+    h2.section-title Pledged Stocks List
+    table.table
       thead
         tr
           th Stock Name
@@ -22,13 +17,10 @@ block main-content
           tr
             td= stock.name
             td= stock.qty
-  .crypto 
-  h3 Daily Total value of Pledged Stocks :  #{total}
 
-  h2 Pledged Crypto-currency List
-
-  
-  table
+  .crypto
+    h2.section-title Pledged Crypto-currency List
+    table.table
       thead
         tr
           th Crypto Name
@@ -36,21 +28,13 @@ block main-content
       tbody
         each crypto in cryptoList
           tr
-            td=crypto.name
+            td= crypto.name
             td= crypto.qty
-  h3 Daily Total value of Pledged CryptoCurrency : #{cryptoTotal}
-  
-  h3 Total Value of Pledged Assets : #{totalPledge}
- 
-  if (totalPledge)< 10000
-     p Current pledge value is less than total value. Margin Shortfall is #{marginShortfall}
-  
-  else
-     p Current pledge value is more than total value. No action required.
-  
-  p Try refreshing again to get the right prices. Sometimes there are bad API calls.
 
-  //- p #{availableCryptos}
-  //- p crypto total #{cryptoTotal}
- 
-  
+  .summary
+    h3.summary-title Total Value of Pledged Assets: $#{totalPledge}
+    p.summary-text(class=totalPledge < 10000 ? 'margin-shortfall' : 'margin-sufficient')
+      | Current pledge value is #{totalPledge < 10000 ? 'less than' : 'more than'} total value.
+      = totalPledge < 10000 ? `Margin Shortfall is $${marginShortfall}` : 'No action required.'
+
+  p.refresh-text Try refreshing again to get the right prices. Sometimes there are bad API calls.

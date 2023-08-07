@@ -1,16 +1,18 @@
-extends layout 
+extends layout
 
+block main-content
+  .page-title-container
+    h1.page-title Pledge More Crypto
+    h1.page-subtitle Expand your collateral with additional cryptocurrencies
 
-block main-content 
- p Please add Crypto symbols only like BTC, BCH, ETH, etc.
-
- form(method="post", action="/addcrypto/addCryptoItem/submit")
-    div
+  .crypto-form
+    p Please add Crypto symbols only like BTC, BCH, ETH, etc.
+    form.form-container(method="post", action="/addcrypto/addCryptoItem/submit")
+      .form-group
         label(for="cryptoName") Crypto Name:
-        input(type="text", name="cryptoName", id="cryptoName")
-    div
+        input.form-control(type="text", name="cryptoName", id="cryptoName", required)
+      .form-group
         label(for="cryptoQty") Quantity:
-        input(type="text", name="cryptoQty", id="cryptoQty")
-    div
-        button(type="submit") Pledge Crypto
-    
+        input.form-control(type="number", name="cryptoQty", id="cryptoQty", required)
+      .form-group
+        button.btn.btn-primary(type="submit") Pledge Crypto

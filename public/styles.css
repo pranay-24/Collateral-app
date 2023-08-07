@@ -8,6 +8,18 @@ body{
  
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the content covers at least the viewport height */
+}
+
+.main-content {
+  flex: 1; /* Allow the content to take up remaining vertical space */
+  /* Add any other styling for your main content */
+}
+
+
 /*Header --------------------------*/
 
 header {
@@ -85,6 +97,18 @@ margin-right:25px;
 }
 
 /*Footer ------------------------------------------*/ 
+.footer {
+  display:flex;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  justify-content: center;;
+  text-align: center;
+  /* Stick the footer to the bottom */
+  margin-top: auto;
+
+}
+
 .container{
 background-color: rgb(130, 157, 141);
 
@@ -160,6 +184,190 @@ color:grey;
 text-align:center;
 border: 1px solid rgba(0,0,0,0.15)
 }
+
+/*Homepage*/
+/* Example CSS for the improved Pug template */
+.page-title-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.page-title {
+  font-size: 24px;
+  color: #333;
+  margin: 0;
+}
+
+.page-subtitle {
+  font-size: 18px;
+  color: #777;
+  margin: 0;
+}
+
+.section-title {
+  font-size: 20px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.table th,
+.table td {
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.summary-title {
+  font-size: 18px;
+  color: #444;
+  margin: 10px 0;
+}
+
+.summary-text {
+  font-size: 16px;
+}
+
+.margin-shortfall {
+  color: #ff0000;
+}
+
+.margin-sufficient {
+  color: #00cc00;
+}
+
+.refresh-text {
+  font-size: 14px;
+  color: #666;
+  margin-top: 20px;
+}
+
+
+/*Add stock page*/
+/* Example CSS for the "Add Stock" page */
+.page-title-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.page-title {
+  font-size: 24px;
+  color: #333;
+  margin: 0;
+}
+
+.page-subtitle {
+  font-size: 18px;
+  color: #777;
+  margin: 0;
+}
+
+.form-container {
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.label {
+  font-size: 16px;
+  color: #555;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn {
+  padding: 8px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+}
+
+.btn-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.stock-list {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/*Add Crypto page*/
+/* Example CSS for the "Add Crypto" page */
+.page-title-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.page-title {
+  font-size: 24px;
+  color: #333;
+  margin: 0;
+}
+
+.page-subtitle {
+  font-size: 18px;
+  color: #777;
+  margin: 0;
+}
+
+.form-container {
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.label {
+  font-size: 16px;
+  color: #555;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn {
+  padding: 8px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+}
+
 
 @media all and (max-width:768px){
 nav ul {
