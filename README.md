@@ -11,12 +11,15 @@
 ### Marketstack API documentation link https://marketstack.com/documentation
 
 ### Homepage 
-![Homepage](https://github.com/pranay-24/Collateral-app/assets/98065802/e70d4cd1-46b7-418e-bb40-263735d743e3)
+![Homepage](https://github.com/pranay-24/Collateral-app/assets/98065802/d556c335-5fb1-4bb6-840e-11f281e2df91)
+
 
 ### Add Stock Page
 
-![Add stock page](https://github.com/pranay-24/Collateral-app/assets/98065802/164db30e-5d50-4cea-a5c0-f4c21641826d)
+![Add stock page](https://github.com/pranay-24/Collateral-app/assets/98065802/10f59ead-21c0-44ab-8ddd-678b5f6beb05)
+
 
 ## Add Crypto Page
 
-![Add Crypto page](https://github.com/pranay-24/Collateral-app/assets/98065802/04ebb6a1-b143-4b07-965e-fbf3862ab161)
+![Add Crypto page](https://github.com/pranay-24/Collateral-app/assets/98065802/43ebdb1c-5f72-46de-8a35-19b0d5b87da4)
+
